@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "title": "Belajar React dari Nol 0",
+      "body": "React adalah library JavaScript untuk membuat UI. Postingan ini menjelaskan dasar-dasar React, mulai dari komponen, props, dan state.",
+      "author": "Firzakk",
+      "tags": [
+        "react",
+        "frontend",
+        "javascriptt"
+      ],
+      "id": "1"
+    },
+    {
+      "title": "Memahami CRUD di Web Development (Update)",
+      "body": "CRUD adalah dasar aplikasi. Sekarang datanya diupdate penuh dengan PUT.",
+      "author": "Admin",
+      "likes": 999,
+      "tags": [
+        "react",
+        "hooks",
+        "update"
+      ],
+      "comments": [
+        {
+          "id": 1,
+          "user": "Citra",
+          "message": "Penjelasan CRUD-nya gampang dimengerti.",
+          "date": "2025-09-23T12:00:00Z"
+        }
+      ],
+      "id": "2"
+    },
+    {
+      "id": "05eb",
+      "title": "Edannnn",
+      "body": "Siap mang selesai juga nih, biasa di sesatin gpt.",
+      "author": "Gw sendiri dong",
+      "tags": [
+        "PP",
+        "PP"
+      ]
+    }
+  ]
+}
