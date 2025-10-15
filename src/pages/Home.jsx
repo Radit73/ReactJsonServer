@@ -5,10 +5,9 @@ export default function Home() {
         <div className="max-w-md">
           <h1 className="text-4xl font-bold text-primary">Welcome to the Home Page</h1>
           <p className="py-6 text-gray-600">
-            This app demonstrates how to use <strong>React Query</strong>, <strong>Zustand</strong>, <strong>Zod</strong>,
-            and <strong>DaisyUI</strong> to build modern, interactive, and stylish apps.
+            A demo app built with <strong>React</strong>, <strong>DaisyUI</strong>,
+            <strong> Zustand</strong>, and <strong>React Query</strong>.
           </p>
-          <button className="btn btn-primary">Get Started</button>
         </div>
       </div>
     </div>

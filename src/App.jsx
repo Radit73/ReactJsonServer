@@ -11,12 +11,14 @@ export default function App() {
   const { user, logout } = useAuthStore();
 
   return (
-    <div className="min-h-screen bg-base-200">
+    // Gunakan flex layout biar footer bisa nempel di bawah
+    <div className="flex flex-col min-h-screen bg-base-200">
+
       {/* Navbar */}
-      <div className="navbar bg-base-100 shadow-md px-6">
+      <header className="navbar bg-base-100 shadow-md px-6">
         <div className="flex-1">
           <Link to="/" className="btn btn-ghost normal-case text-xl text-primary">
-            🌸 React Modern Stack
+            🌸 ARF
           </Link>
         </div>
         <div className="flex-none gap-2">
@@ -32,10 +34,10 @@ export default function App() {
             <Link to="/login" className="btn btn-primary btn-sm">Login</Link>
           )}
         </div>
-      </div>
+      </header>
 
-      {/* Routes */}
-      <main className="p-6 max-w-5xl mx-auto">
+      {/* Konten utama */}
+      <main className="flex-grow p-6 max-w-5xl mx-auto w-full">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -46,10 +48,13 @@ export default function App() {
         </Routes>
       </main>
 
-      <footer className="footer footer-center bg-base-100 text-base-content p-4 border-t">
+      {/* Footer selalu di bawah */}
+      <footer className="footer footer-center bg-base-100 text-base-content p-4 border-t mt-auto">
         <aside>
           <p>
-            Built with ❤️ using React + DaisyUI by <span className="text-primary font-semibold">Borodo</span>
+            Built with ❤️ using <span className="font-semibold text-primary">React</span> +{" "}
+            <span className="text-primary font-semibold">DaisyUI</span> by{" "}
+            <span className="text-secondary font-bold">Afrizal.R.F</span>
           </p>
         </aside>
       </footer>
