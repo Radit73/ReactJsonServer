@@ -2,33 +2,33 @@ import { motion as Motion } from "framer-motion";
 
 const timeline = [
   {
-    title: "Pengaturan Proyek",
+    title: "Setup Cepat",
     description:
-      "Mulai dengan Vite + React dan install Tailwind CSS, DaisyUI, serta Framer Motion untuk styling dan animasi.",
+      "Mulai dengan Vite + React, lalu pasang Tailwind, DaisyUI, dan Framer Motion untuk styling dan animasi dasar.",
     badge: "Setup",
     color: "from-sky-500 to-cyan-400",
   },
   {
-    title: "State & Data Layer",
+    title: "Integrasi Supabase",
     description:
-      "Gunakan Zustand untuk auth state yang sederhana, React Query untuk komunikasi ke JSON Server, dan Zod untuk validasi.",
-    badge: "Data Flow",
+      "Sambungkan tabel posts ke Supabase, aktifkan React Query untuk fetch dan cache, serta siapkan Zod untuk validasi.",
+    badge: "Data",
     color: "from-fuchsia-500 to-pink-500",
   },
   {
     title: "Halaman CRUD",
     description:
-      "Halaman Posts menampilkan daftar, tambah, dan edit. Framer Motion menambah animasi mikro agar interaksi terasa hidup.",
+      "Bangun daftar Posts, form tambah, dan editor dengan animasi ringan agar alur tambah, edit, dan hapus terasa halus.",
     badge: "CRUD",
     color: "from-amber-500 to-orange-500",
   },
 ];
 
 const stack = [
-  { label: "React 19 + Vite 7", tone: "text-primary" },
-  { label: "Tailwind CSS & DaisyUI", tone: "text-secondary" },
-  { label: "React Query 5", tone: "text-accent" },
-  { label: "Zustand + Zod", tone: "text-success" },
+  { label: "React + Vite", tone: "text-primary" },
+  { label: "Tailwind & DaisyUI", tone: "text-secondary" },
+  { label: "Supabase + React Query", tone: "text-accent" },
+  { label: "Zustand & Zod", tone: "text-success" },
 ];
 
 export default function About() {
@@ -44,9 +44,8 @@ export default function About() {
           Tentang Aplikasi
         </Motion.h1>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-300 md:text-base">
-          Proyek ini didesain untuk menjadi landasan belajar dan eksperimen web modern. Fokus pada
-          konsistensi UI, responsivitas, serta alur data yang bersih, membuatnya cocok dijadikan bahan
-          referensi tugas maupun portofolio.
+          Ini adalah proyek latihan CRUD sederhana. Tujuannya menunjukkan bagaimana React, Supabase,
+          dan beberapa library pendukung bisa bekerja bersama tanpa konfigurasi rumit.
         </p>
         <div className="mt-6 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-wide text-slate-300">
           {stack.map((item) => (
@@ -102,26 +101,20 @@ export default function About() {
           <h2 className="text-xl font-semibold text-secondary">Highlight Fitur</h2>
           <div className="space-y-3 text-sm leading-relaxed text-slate-200">
             <p>
-              <span className="font-semibold text-secondary">Auth Persisten:</span> Data login disimpan ke
-              localStorage menggunakan middleware Zustand.
+              <span className="font-semibold text-secondary">CRUD Supabase:</span> semua aksi post berjalan lewat API Supabase.
             </p>
             <p>
-              <span className="font-semibold text-primary">Validasi Solid:</span> Setiap form menggunakan Zod
-              sehingga feedback lebih kredibel.
+              <span className="font-semibold text-primary">Validasi Form:</span> Zod dan React Hook Form memberi feedback jelas.
             </p>
             <p>
-              <span className="font-semibold text-accent">Transisi Halus:</span> Framer Motion membuat setiap
-              pergantian halaman terasa premium.
+              <span className="font-semibold text-accent">Animasi Ringan:</span> Framer Motion menjaga transisi tetap hidup.
             </p>
             <p>
-              <span className="font-semibold text-success">Tema Dinamis:</span> DaisyUI memberi baseline tema
-              yang mudah dimodifikasi.
+              <span className="font-semibold text-success">Tema Konsisten:</span> Tailwind dan DaisyUI mempercepat styling.
             </p>
           </div>
           <div className="rounded-2xl border border-white/20 bg-slate-950/60 p-4 text-sm text-slate-300 shadow-md">
-            Tips: Jalankan <span className="font-semibold text-secondary">npm run server</span> untuk menyalakan JSON Server, lalu{" "}
-            <span className="font-semibold text-secondary">npm run dev</span> untuk
-            melihat UI responsif ini di browser.
+            Tips: Cukup jalankan <span className="font-semibold text-secondary">npm run dev</span> dan pastikan environment Supabase sudah terisi.
           </div>
         </Motion.aside>
       </section>

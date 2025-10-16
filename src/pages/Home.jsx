@@ -3,29 +3,29 @@ import { motion as Motion } from "framer-motion";
 
 const features = [
   {
-    title: "Instant CRUD Workflows",
+    title: "Supabase Terintegrasi",
     description:
-      "Kelola posts menggunakan React Query dengan invalidation otomatis, form validation, dan feedback real time.",
+      "CRUD post langsung ke Supabase, lengkap dengan React Query untuk cache dan invalidation otomatis.",
     accent: "from-sky-500 via-cyan-400 to-emerald-400",
   },
   {
-    title: "Modern UI Toolkit",
+    title: "Form Valid & Responsif",
     description:
-      "Tailwind CSS + DaisyUI memberikan komponen elegan yang mudah dikustom dan konsisten di semua device.",
+      "React Hook Form dan Zod memastikan input bersih, sementara Tailwind + DaisyUI menjaga tampilan rapi.",
     accent: "from-fuchsia-500 via-pink-500 to-rose-400",
   },
   {
-    title: "State Management Ringan",
+    title: "State Sederhana",
     description:
-      "Zustand menyederhanakan auth state dengan API yang kecil namun kuat, tanpa boilerplate berlebih.",
+      "Zustand menyimpan status auth ringan sehingga halaman CRUD tetap fokus pada data postingan.",
     accent: "from-amber-500 via-orange-500 to-red-400",
   },
 ];
 
 const stats = [
-  { label: "Queries aktif", value: "20+" },
-  { label: "Komponen reuse", value: "15" },
-  { label: "Animasi mikro", value: "30" },
+  { label: "Posts tersimpan", value: "Supabase" },
+  { label: "Form tervalidasi", value: "100%" },
+  { label: "Halaman utama", value: "3" },
 ];
 
 export default function Home() {
@@ -59,7 +59,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="max-w-3xl text-4xl font-black leading-tight md:text-6xl"
           >
-            Bangun dashboard modern yang responsif dan interaktif dalam hitungan menit.
+            CRUD React + Supabase yang ringan untuk latihan dan eksperimen.
           </Motion.h1>
           <Motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -67,9 +67,8 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="max-w-3xl text-base leading-relaxed text-white/80 md:text-lg"
           >
-            Kombinasi React, Vite, Tailwind, DaisyUI, dan Framer Motion menghasilkan tampilan
-            yang kaya warna namun tetap rapi. Sinkronkan data melalui JSON Server dan nikmati
-            alur kerja CRUD yang mulus.
+            Aplikasi ini memakai React, Vite, Tailwind, dan DaisyUI dengan Framer Motion sebagai bumbu.
+            Data disimpan di Supabase, diambil melalui React Query, dan divalidasi lewat Zod.
           </Motion.p>
           <Motion.div
             initial={{ opacity: 0, y: 15 }}
@@ -120,8 +119,8 @@ export default function Home() {
         >
           <h3 className="text-lg font-semibold text-primary">Integrasi Cepat</h3>
           <p className="text-sm text-slate-300">
-            JSON Server berjalan di port 5000 dan langsung sinkron dengan React Query. Gunakan
-            halaman Posts untuk melihat daftar, menambah, dan mengedit data dengan animasi halus.
+            Supabase bertugas sebagai database utama. React Query mengurus fetch, cache, dan refresh
+            otomatis sehingga halaman Posts selalu tersinkron.
           </p>
           <div className="divider my-4 border-white/20" />
           <ul className="space-y-3 text-sm text-slate-200">
@@ -145,9 +144,9 @@ export default function Home() {
         viewport={{ once: true }}
         className="rounded-3xl border border-white/10 bg-slate-900/70 p-8 text-slate-100 shadow-xl shadow-secondary/10 backdrop-blur"
       >
-        <h2 className="text-2xl font-bold text-secondary md:text-3xl">Progress Preview</h2>
+        <h2 className="text-2xl font-bold text-secondary md:text-3xl">Status Singkat</h2>
         <p className="mt-2 max-w-2xl text-sm text-slate-300">
-          Pantau statistik kecil untuk memastikan UI tetap responsif dan informatif saat data terus berubah.
+          Beberapa angka sederhana untuk menunjukkan bagaimana modul utama saling terhubung.
         </p>
         <div className="mt-6 grid gap-6 md:grid-cols-3">
           {stats.map((stat) => (
